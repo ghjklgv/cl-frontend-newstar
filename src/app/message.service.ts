@@ -9,6 +9,9 @@ export class MessageService {
   }
 
   clear() {
-    this.messages = [];
+   const r = confirm("是否確認要清空所有內容");
+    if (r == true) {
+      this.messages = [];
+    }
   }
 }
