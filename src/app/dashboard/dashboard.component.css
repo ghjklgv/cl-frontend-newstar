@@ -54,23 +54,25 @@ h4 {
   padding-right: 20px;
 }
 
+@media (min-width: 768px) {
+  .grid {
+    flex-wrap: wrap;
+  }
+  .col{
+    flex-basis: 50%;
+  }
+}
+
 @media (max-width: 768px) {
   .grid {
     flex-direction: column;
   }
 }
+
 @media (max-width: 600px) {
   .module {
     font-size: 10px;
     max-height: 75px;
   }
 }
-@media (max-width: 850px) {
-  .grid {
-    margin: 0;
-    flex-wrap: unset;
-  }
-  .module {
-    min-width: 60px;
-  }
-}
+
