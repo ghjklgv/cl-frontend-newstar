@@ -16,7 +16,7 @@ import { HeroService } from "./hero.service";
 import { MessageService } from "./message.service";
 import { MessagesComponent } from "./messages/messages.component";
 import { BonusPointModule } from "./bonus-point/bonus-point.module";
-// import {SharedModule} from './shared/shared.module';
+import { AppService } from "./app.service";
 
 @NgModule({
   imports: [
@@ -29,16 +29,13 @@ import { BonusPointModule } from "./bonus-point/bonus-point.module";
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
+      passThruUnknownUrl: true,
     }),
     BonusPointModule,
   ],
-  declarations: [
-    AppComponent,
-    HeroDetailComponent,
-    MessagesComponent,
-  ],
+  declarations: [AppComponent, HeroDetailComponent, MessagesComponent],
 
-  providers: [HeroService, MessageService],
+  providers: [HeroService, MessageService, AppService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
