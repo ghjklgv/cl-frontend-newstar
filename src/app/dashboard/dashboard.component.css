@@ -58,7 +58,7 @@ h4 {
   .grid {
     flex-wrap: wrap;
   }
-  .col{
+  .col {
     flex-basis: 50%;
   }
 }
@@ -69,10 +69,15 @@ h4 {
   }
 }
 
+@media (min-width: 992px) {
+  .grid {
+    flex-wrap: nowrap;
+  }
+}
+
 @media (max-width: 600px) {
   .module {
     font-size: 10px;
     max-height: 75px;
   }
 }
-
