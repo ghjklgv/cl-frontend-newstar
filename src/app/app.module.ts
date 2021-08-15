@@ -17,6 +17,9 @@ import { MessageService } from "./message.service";
 import { MessagesComponent } from "./messages/messages.component";
 import { BonusPointModule } from "./bonus-point/bonus-point.module";
 import { AppService } from "./app.service";
+import { CookieModule } from 'ngx-cookie';
+
+// import { NineBlockComponent } from './nine-block/nine-block.component';
 
 @NgModule({
   imports: [
@@ -24,6 +27,7 @@ import { AppService } from "./app.service";
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    CookieModule.forRoot(),
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

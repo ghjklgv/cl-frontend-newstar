@@ -1,0 +1,27 @@
+
+.item1 { grid-area: menu; }
+.item2 { grid-area: header; }
+.item3 { grid-area: right; }
+.item4 { grid-area: mainCenter; }
+.item5 { grid-area: rightCentrt; }
+.item6 { grid-area: menuFooter; }
+.item7 { grid-area: footer; }
+
+.gridTemplete {
+    display: grid;
+    width: 910px;
+    height: 300px;
+
+    grid-template:
+    'menu menu header header right right'
+    'menu menu mainCenter mainCenter rightCentrt rightCentrt'
+    'menuFooter menuFooter footer footer footer footer';
+    grid-gap: 1px;
+  }
+  .gridTemplete > div{
+       display: flex;
+       justify-content: center;
+        align-items: center;
+      border: 1px solid black;
+  }
+
